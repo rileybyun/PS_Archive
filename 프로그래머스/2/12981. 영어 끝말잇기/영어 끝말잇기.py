@@ -1,10 +1,10 @@
 def solution(n, words):
     beforewords = set(); last_character = ""
-    i = 0
-    while i < len(words):
-        if len(beforewords) == 0:
-            pass
-        else:
+    if len(words) > 1:
+        beforewords.add(words[0])
+        last_character = words[0][-1]
+        i = 1
+        while i < len(words):
             if len(words[i]) <= 1:
                 return [(i % n) + 1, (i // n) + 1]
             elif words[i] in beforewords:
@@ -12,8 +12,7 @@ def solution(n, words):
             elif words[i][0] != last_character:
                 return [(i % n) + 1, (i // n) + 1]
             else:
-                pass
-        beforewords.add(words[i])
-        last_character = words[i][-1]
-        i += 1
+                beforewords.add(words[i])
+                last_character = words[i][-1]
+                i += 1
     return [0, 0]
