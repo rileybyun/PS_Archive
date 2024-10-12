@@ -5,7 +5,7 @@ def solution(players, callings):
     back = players[1:] + [""]
 
     a = map(list, zip(orders, ahead, back))
-    ds = dict(zip(players, a))
+    ds = dict(zip(players, a))  # 'the_player': [the_rank, front_person, back_person]
 
     pivot = players[0]  # 맨 앞에 있는 사람 이름
 
