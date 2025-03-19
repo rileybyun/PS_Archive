@@ -28,6 +28,6 @@ def solution(video_len, pos, op_start, op_end, commands):
         elif pos > video_len:
             pos = video_len
         
-        if op_start <= pos <= op_end:
-            pos = op_end    # 오프닝 건너뛰기
+    if op_start <= pos <= op_end:   # 마지막에 한 번 더 체크
+        pos = op_end    # 오프닝 건너뛰기
     return sec_to_str(pos)
