@@ -2,7 +2,7 @@ from collections import deque
 
 def solution(maps):
     row = len(maps)   # 가로 길이
-    col = len(maps[0])
+    col = len(maps[0])  # 세로 길이
     visited = [[False] * col for i in range(row)]
     shortest_dist = [[100] * col for i in range(row)]
     
