@@ -6,6 +6,7 @@ def solution(sizes):
     for i in range(len(sizes)):
         a, b = sizes[i]
         
+        # 가로길이가 세로길이보다 길도록 통일 (a: 가로, b: 세로)
         if a < b:
             a, b = b, a
         
